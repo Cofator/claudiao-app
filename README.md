@@ -13,4 +13,4 @@ Cockpit web do Claudião (app.claudiao.app). Vite + React + shadcn/ui.
 
 ## Estrutura
 
-Ver `docs/superpowers/specs/2026-06-16-claudiao-app-fase1b-cockpit-design.md` no repo `minimax-reseller`.
+Ver `docs/superpowers/specs/2026-06-16-claudiao-app-fase1b-cockpit-design.md` no repo `claudiao-backend`.

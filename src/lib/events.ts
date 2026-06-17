@@ -1,6 +1,6 @@
 // src/lib/events.ts
 // Tipos do NDJSON que o Ajudante emite. Mantém sincronia com
-// D:\Claude_Code\minimax-reseller\src\ajudante\events.ts.
+// D:\Claude_Code\claudiao\claudiao-backend\src\ajudante\events.ts.
 // Se o backend mudar este tipo, atualizar este arquivo também.
 
 export type AjudanteEvent =

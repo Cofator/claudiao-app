@@ -1,6 +1,7 @@
 // src/lib/api.ts
 // Cliente para o backend do minimax-reseller (api.claudiao.app).
-// Reusa os endpoints /api/client/* já existentes (ver src/client-api.ts no backend).
+// Reusa os endpoints /api/client/* já existentes (ver src/client-api.ts no repo
+// minimax-reseller em D:\Claude_Code\minimax-reseller\).
 
 const API_BASE = 'https://api.claudiao.app'
 

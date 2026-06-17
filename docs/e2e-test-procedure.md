@@ -13,18 +13,18 @@ Validar o fluxo ponta-a-ponta da Fase 1b: cliente instala Ajudante + Bridge, abr
 
 ```bash
 # 1. Buildar tudo
-cd D:\Claude_Code\claudiao-app
+cd D:\Claude_Code\claudiao\claudiao-app
 npm install
 npm run build
 node scripts/build-bridge-zip.mjs
 
-cd D:\Claude_Code\minimax-reseller
+cd D:\Claude_Code\claudiao\claudiao-backend
 npm run build:ajudante     # script PowerShell (Bun)
 ```
 
 Resultado esperado:
-- `D:\Claude_Code\claudiao-app\dist\claudio-bridge-0.1.0.zip` (~50 KB)
-- `D:\Claude_Code\minimax-reseller\dist\ajudante\ajudante.exe` (~30 MB)
+- `D:\Claude_Code\claudiao\claudiao-app\dist\claudio-bridge-0.1.0.zip` (~50 KB)
+- `D:\Claude_Code\claudiao\claudiao-backend\dist\ajudante\ajudante.exe` (~95 MB — Node embutido)
 
 ### Setup (cliente) — instalar localmente em outro PC ou VM
 
