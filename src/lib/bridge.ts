@@ -5,6 +5,16 @@ import type { AjudanteEvent } from '@/lib/events'
 
 let lastBridgePingAt = 0
 
+/** Teste: reseta o estado de handshake. */
+export function __resetBridgeForTest(): void {
+  lastBridgePingAt = 0
+}
+
+/** Teste: simula que a Bridge pingou agora. */
+export function __markBridgePingedForTest(): void {
+  lastBridgePingAt = Date.now()
+}
+
 export function isBridgeAvailable(): boolean {
   return Date.now() - lastBridgePingAt < 5_000
 }
