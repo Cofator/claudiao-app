@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Claudião Bridge",
+  "version": "0.1.0",
+  "description": "Conecta o cockpit app.claudiao.app ao Ajudante local em 127.0.0.1:8765",
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "permissions": ["scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.claudiao.app/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
