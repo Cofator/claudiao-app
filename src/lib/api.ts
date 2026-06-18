@@ -1,9 +1,10 @@
 // src/lib/api.ts
-// Cliente para o backend do minimax-reseller (api.claudiao.app).
+// Cliente para o backend do minimax-reseller (servido em claudiao.app).
 // Reusa os endpoints /api/client/* já existentes (ver src/client-api.ts no repo
-// minimax-reseller em D:\Claude_Code\minimax-reseller\).
+// minimax-reseller em D:\Claude_Code\minimax-reseller\). O backend libera CORS
+// para a origem app.claudiao.app (hook em registerClientApi).
 
-const API_BASE = 'https://api.claudiao.app'
+const API_BASE = 'https://claudiao.app'
 
 export type LoginResult =
   | { ok: true; token: string; baseUrl: string; name: string; balanceBrl: number; windowHours: number }
