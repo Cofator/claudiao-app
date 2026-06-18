@@ -1,22 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --primary: 38 92% 50%;
-    --primary-foreground: 26 83% 14%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 38 92% 50%;
-    --radius: 0.5rem;
+    /* Paleta extraída do logo oficial do Claudião (preto profundo + dourado rico) */
+    --background: 36 26% 4%;          /* #0C0A07 */
+    --foreground: 42 50% 90%;         /* #F2EAD8 */
+    --card: 43 44% 6%;                /* #171309 */
+    --card-foreground: 42 50% 90%;
+    --popover: 39 36% 9%;             /* #201A0F */
+    --popover-foreground: 42 50% 90%;
+    --primary: 39 85% 60%;            /* #F0B441 dourado */
+    --primary-foreground: 36 26% 4%;  /* texto escuro sobre o dourado */
+    --secondary: 39 36% 9%;
+    --secondary-foreground: 42 50% 90%;
+    --muted: 39 36% 9%;
+    --muted-foreground: 40 17% 59%;   /* #A89C84 */
+    --accent: 39 36% 12%;
+    --accent-foreground: 42 50% 90%;
+    --destructive: 8 80% 56%;         /* terra avermelhado p/ erros */
+    --destructive-foreground: 42 50% 90%;
+    --border: 38 31% 14%;             /* #2E2618 */
+    --input: 38 31% 14%;
+    --ring: 39 85% 60%;
+    --radius: 0.75rem;
   }
 }
 
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: hsl(var(--background));
-  color: hsl(var(--foreground));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  /* textura de papel sutil, igual à landing */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.04;
+    background-image: radial-gradient(hsl(var(--foreground)) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--background));
+  }
 }

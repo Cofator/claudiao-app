@@ -46,8 +46,8 @@ export function PairingFlow() {
         <div className="flex items-center gap-2">
           <span>Extensão Bridge:</span>
           {bridgeUp
-            ? <Badge className="bg-green-100 text-green-800">Instalada ✅</Badge>
-            : <Badge className="bg-yellow-100 text-yellow-800">Não detectada</Badge>}
+            ? <Badge className="border-claudio-ok/40 bg-claudio-ok/10 text-claudio-ok">Instalada ✅</Badge>
+            : <Badge className="border-claudio-amber/40 bg-claudio-amber/10 text-claudio-amber">Não detectada</Badge>}
         </div>
 
         {!bridgeUp && (
@@ -75,13 +75,13 @@ export function PairingFlow() {
             value={secret}
             onChange={(e) => setSecret(e.target.value)}
           />
-          {error && <p className="text-sm text-red-600">{error}</p>}
+          {error && <p className="text-sm text-destructive">{error}</p>}
           <Button onClick={onPair} disabled={!secret || status === 'paring'}>
             {status === 'paring' ? 'Pareando...' : '🤝 Parear'}
           </Button>
         </div>
 
-        {status === 'done' && <p className="text-green-600 font-medium">✅ Pareado! Indo pro chat...</p>}
+        {status === 'done' && <p className="text-claudio-ok font-medium">✅ Pareado! Indo pro chat...</p>}
       </CardContent>
     </Card>
   )
